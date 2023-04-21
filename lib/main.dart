@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  var name = 'foo';
-  name = 'anthonu';
   runApp(const MyApp());
 }
 
@@ -15,7 +13,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print(getName('Jeremiah', 'Greene'));
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
@@ -56,9 +53,17 @@ class _MyHomePageState extends State<MyHomePage> {
                   color: Colors.white,
                 ),
                 Spacer(flex: 1),
-                Icon(Icons.star, color: Colors.white),
+                Icon(
+                  Icons.star,
+                  color: Colors.white,
+                  size: 28,
+                ),
                 Spacer(flex: 10),
-                Icon(Icons.waves_rounded, color: Colors.white),
+                Icon(
+                  Icons.waves_outlined,
+                  color: Colors.white,
+                  size: 28,
+                ),
               ],
             ),
           ],
