@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
 
 void main() {
+  var name = 'foo';
+  name = 'anthonu';
   runApp(const MyApp());
+}
+
+String getName(String firstName, String lastName) {
+  return '$firstName $lastName';
 }
 
 class MyApp extends StatelessWidget {
@@ -9,6 +15,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print(getName('Jeremiah', 'Greene'));
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
@@ -23,7 +30,6 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
 
-
   final String title;
 
   @override
@@ -31,39 +37,33 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
+      backgroundColor: Colors.black,
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 15),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
+          children: [
+            const SizedBox(
+              height: (45),
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
+            Row(
+              children: const [
+                Icon(
+                  Icons.home_outlined,
+                  size: 33,
+                  color: Colors.white,
+                ),
+                Spacer(flex: 1),
+                Icon(Icons.star, color: Colors.white),
+                Spacer(flex: 10),
+                Icon(Icons.waves_rounded, color: Colors.white),
+              ],
             ),
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
