@@ -4,21 +4,24 @@ void main() {
   runApp(const MyApp());
 }
 
-String getName(String firstName, String lastName) {
-  return '$firstName $lastName';
+class Cat extends Object {
+  final String name;
+
+  Cat(this.name);
 }
+
+void test() {}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
+    test();
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      title: 'Home App Clone',
+      theme: ThemeData(),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
@@ -36,34 +39,36 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       backgroundColor: Colors.black,
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 15),
+        padding: EdgeInsets.symmetric(horizontal: 15),
         child: Column(
           children: [
-            const SizedBox(
+            SizedBox(
               height: (45),
             ),
             Row(
-              children: const [
-                Icon(
-                  Icons.home_outlined,
-                  size: 33,
-                  color: Colors.white,
-                ),
-                Spacer(flex: 1),
-                Icon(
-                  Icons.star,
-                  color: Colors.white,
-                  size: 28,
-                ),
+              children: [
+                // Icon(
+                //   Icons.home_outlined,
+                //   size: 33,
+                //   color: Colors.white,
+                // ),
+
+                // Spacer(flex: 1),
+                // Icon(
+                //   Icons.star,
+                //   color: Colors.white,
+                //   size: 28,
+                // ),
+
                 Spacer(flex: 10),
-                Icon(
-                  Icons.waves_outlined,
-                  color: Colors.white,
-                  size: 28,
-                ),
+                // Icon(
+                //   Icons.waves_outlined,
+                //   color: Colors.white,
+                //   size: 28,
+                // ),
               ],
             ),
           ],
