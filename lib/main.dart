@@ -4,11 +4,11 @@ void main() {
   runApp(const MyApp());
 }
 
-class Cat extends Object {
-  final String name;
+// class Cat extends Object {
+//   final String name;
 
-  Cat(this.name);
-}
+//   Cat(this.name);
+// }
 
 void test() {}
 
